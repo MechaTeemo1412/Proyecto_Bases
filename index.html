@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Calificaciones - Ingeniería Informática</title>
+    
+    <!-- Enlace a la hoja de estilos principal -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Librerías externas de internet para gráficos e iconos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <!-- Contenedor para el logo y el título -->
+            <div class="logo-container">
+                <span class="logo-icon">
+                    <i class="fas fa-book-open"></i>
+                </span>
+                <h1>Portal de Calificaciones</h1>
+            </div>
+            <!-- Navegación principal del portal -->
+            <nav>
+                <a href="#" id="nav-resumen" class="active">Resumen</a>
+                <a href="#" id="nav-perfil">Mi Perfil</a>
+                <a href="#" id="logout-btn">Cerrar Sesión</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <!-- VISTA PRINCIPAL: RESUMEN DE CALIFICACIONES -->
+        <!-- Esta vista se muestra por defecto -->
+        <div id="resumen-view">
+            <!-- [ARREGLO CLAVE] Este div ahora maneja el layout interno para evitar conflictos con la clase .hidden -->
+            <div class="content-wrapper">
+                
+                <h2>Resumen General</h2>
+                <div class="summary-cards">
+                    <div class="card">
+                        <h3>Promedio General</h3>
+                        <p id="avg-general">--</p>
+                    </div>
+                    <div class="card">
+                        <h3>Asignaturas Aprobadas</h3>
+                        <p id="avg-aprobadas">-- / --</p>
+                    </div>
+                    <div class="card">
+                        <h3>Mejor Ramo</h3>
+                        <p id="mejor-ramo">--</p>
+                    </div>
+                </div>
+
+                <div class="chart-container card">
+                    <h3>Promedio por Asignatura</h3>
+                    <canvas id="gradeChart"></canvas>
+                </div>
+                
+                <div class="subjects-section">
+                    <h2>Detalle de Asignaturas</h2>
+                    <div class="filter-container">
+                        <label for="filter-subject">Filtrar por asignatura:</label>
+                        <select id="filter-subject">
+                            <option value="todos">Ver Todas</option>
+                            <!-- Las opciones se generarán con JavaScript -->
+                        </select>
+                    </div>
+                    <div id="subject-list">
+                        <!-- El listado de asignaturas se generará con JavaScript -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- VISTA SECUNDARIA: PERFIL DEL ESTUDIANTE -->
+        <!-- Esta vista está oculta por defecto gracias a la clase .hidden -->
+        <div id="perfil-view" class="hidden">
+            <h2>Mi Perfil</h2>
+            <div class="card profile-card">
+                <p><strong>Nombre:</strong> <span id="perfil-nombre"></span></p>
+                <p><strong>Sección:</strong> <span id="perfil-seccion"></span></p>
+                <p><strong>Materias Inscritas:</strong></p>
+                <ul id="perfil-materias">
+                    <!-- Las materias se generarán con JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Desarrollado por un futuro Ingeniero en Informática © 2025</p>
+    </footer>
+
+    <!-- Enlace al archivo de script principal -->
+    <script src="js/script.js"></script>
+</body>
+</html>
