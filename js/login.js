@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 { id: "cloud", nombre: "Cloud computing", notas: [{ evaluacion: "Parcial 1", nota: 4.0 }, { evaluacion: "Parcial 2", nota: 3.5 }, { evaluacion: "Parcial 3", nota: 4.8 }, { evaluacion: "Examen", nota: 5.8 }] }
             ]
         },
-        "ana.perez@instituto.com": {
-            password: "abc",
-            name: "Ana Pérez",
-            seccion: "005B",
+        "alan.vidal@instituto.cl": {
+            password: "alan1412",
+            name: "alan Vidal",
+            seccion: "002D",
             asignaturas: [
                 { id: "prog", nombre: "Fundamentos de Programación", notas: [{ evaluacion: "Parcial 1", nota: 7.0 }, { evaluacion: "Parcial 2", nota: 6.5 }, { evaluacion: "parcial 3", nota: 6.8 }, { evaluacion: "Examen", nota: 6.9 }] },
                 { id: "cloud", nombre: "Cloud computing", notas: [{ evaluacion: "Parcial 1", nota: 6.1 }, { evaluacion: "Parcial 2", nota: 5.5 }, { evaluacion: "Parcial 3", nota: 6.0 }, { evaluacion: "Examen", nota: 6.2 }] }
